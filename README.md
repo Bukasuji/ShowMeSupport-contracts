@@ -1,7 +1,7 @@
 # Sample Hardhat Project
 
-This is a Solidity smart contract that allows users to show support to the contract owner by sending an ETH tip and leaving a message
+This is a Solidity smart contract that allows users to show support to the contract owner by sending  ETH and leaving a message of encouragement.
 
-SupportContract deployed to: 0x21d35f71F0e6C9fBAbDDD07BAB0997bf8B9be376
+SupportContract deployed to Goerli testnet: 0xB4F9B0617EEA9419ab1f6ec58F47829788537711
 
 
