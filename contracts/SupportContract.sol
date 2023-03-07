@@ -21,7 +21,7 @@ contract SupportContract {
     // Array to store all support messages.
     SupportMessage[] public supportMessages;
     
-    // Event to emit when a support message is created.
+    // Event to emit when a support is shown.
     event SupportMessageCreated (
         address indexed from,
         uint256 timestamp,
@@ -74,6 +74,14 @@ contract SupportContract {
     }
 
     /**
+     * @dev Deletes all stored support messages in the array.
+     */
+    function clearSupportMessages() public {
+        require(msg.sender == owner, "Only the contract owner can clear support messages.");
+        delete supportMessages;
+    }
+
+    /**
      * @dev Sends the entire balance stored in this contract to the owner.
      */
     function ownerWithdraw() public {
@@ -89,5 +97,5 @@ contract SupportContract {
       return address(this).balance;
     }
 
-    //SupportContract deployed to: 0x0B9f832c6180Ff2aa451a41FFA1E38Ab7EB25962
+    
 }
