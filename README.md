@@ -1,13 +1,7 @@
 # Sample Hardhat Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This is a Solidity smart contract that allows users to show support to the contract owner by sending an ETH tip and leaving a message
 
-Try running some of the following tasks:
+SupportContract deployed to: 0x21d35f71F0e6C9fBAbDDD07BAB0997bf8B9be376
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+
