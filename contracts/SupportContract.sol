@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 /**
  * @title SupportContract
- * @dev A contract for users to show support to the contract owner by sending an ETH tip and leaving a message.
+ * @dev A contract for users to show support to the contract owner by sending ETH and leaving a message of encouragement.
  */
 contract SupportContract {
     
@@ -21,7 +21,7 @@ contract SupportContract {
     // Array to store all support messages.
     SupportMessage[] public supportMessages;
     
-    // Event to emit when a support is shown.
+    // These event is emited when a user show support.
     event SupportMessageCreated (
         address indexed from,
         uint256 timestamp,
@@ -29,6 +29,7 @@ contract SupportContract {
         string message
     );
 
+    //A constructor that assigns the owner of the contract to the deployer address
     constructor() {
         owner = payable(msg.sender);
     }
@@ -67,7 +68,7 @@ contract SupportContract {
 
     /**
      * @dev get all stored support messages.
-     * @return An array of SupportMessage structs representing all stored support messages.
+     * @return An array of SupportMessage representing all stored support messages.
      */
     function getAllSupportMessages() public view returns (SupportMessage[] memory) {
         return supportMessages;
@@ -91,9 +92,9 @@ contract SupportContract {
     }
     
     /**
-     * @dev Fetches the total number of tips in the contract(ie the total ether received by the owner).
+     * @dev Fetches the balance of the contract.
      */
-    function getTotalTips() public view returns (uint256) {
+    function getBalance() public view returns (uint256) {
       return address(this).balance;
     }
 
